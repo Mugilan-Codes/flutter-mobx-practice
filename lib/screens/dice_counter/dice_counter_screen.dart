@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_practice/screens/dice_counter/dice_counter.dart';
+import 'package:mobx_practice/widgets/app_bar_widget.dart';
 import 'package:mobx_practice/widgets/navigation_drawer_widget.dart';
 
 final diceCounter = DiceCounter();
@@ -14,11 +15,9 @@ class DiceCounterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber,
-      appBar: AppBar(
-        title: Text(
-          title,
-          style: const TextStyle(color: Colors.black),
-        ),
+      appBar: AppBarWidget(
+        title: title,
+        color: Colors.black,
         backgroundColor: Colors.amberAccent,
       ),
       drawer: const NavigationDrawerWidget(),

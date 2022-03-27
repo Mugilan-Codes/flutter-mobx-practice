@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_practice/screens/counter/counter.dart';
+import 'package:mobx_practice/widgets/app_bar_widget.dart';
 import 'package:mobx_practice/widgets/navigation_drawer_widget.dart';
 
 class CounterScreen extends StatefulWidget {
@@ -18,9 +19,7 @@ class _CounterScreenState extends State<CounterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
+      appBar: AppBarWidget(title: widget.title),
       drawer: const NavigationDrawerWidget(),
       body: Center(
         child: Column(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobx_practice/widgets/app_bar_widget.dart';
 import 'package:mobx_practice/widgets/navigation_drawer_widget.dart';
 
 class TodosScreen extends StatelessWidget {
@@ -6,9 +7,9 @@ class TodosScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Todos"),
+    return const Scaffold(
+      appBar: AppBarWidget(
+        title: "Todos",
       ),
       drawer: NavigationDrawerWidget(),
       body: Center(
