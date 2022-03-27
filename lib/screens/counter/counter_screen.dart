@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx_practice/counter/counter.dart';
+import 'package:mobx_practice/screens/counter/counter.dart';
+import 'package:mobx_practice/widgets/navigation_drawer_widget.dart';
 
 class CounterScreen extends StatefulWidget {
   const CounterScreen({Key? key}) : super(key: key);
@@ -20,6 +21,7 @@ class _CounterScreenState extends State<CounterScreen> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      drawer: const NavigationDrawerWidget(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

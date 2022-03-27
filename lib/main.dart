@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobx_practice/counter/counter_screen.dart';
+import 'package:mobx_practice/screens/counter/counter_screen.dart';
 
 void main() {
   runApp(const MyApp());
