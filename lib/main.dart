@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_practice/counter.dart';
 
-final counter = Counter();
-
 void main() {
   runApp(const MyApp());
 }
@@ -34,6 +32,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final Counter counter = Counter();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
