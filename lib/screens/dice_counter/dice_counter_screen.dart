@@ -15,7 +15,10 @@ class DiceCounterScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.amber,
       appBar: AppBar(
-        title: Text(title),
+        title: Text(
+          title,
+          style: const TextStyle(color: Colors.black),
+        ),
         backgroundColor: Colors.amberAccent,
       ),
       drawer: const NavigationDrawerWidget(),
