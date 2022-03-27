@@ -46,4 +46,3 @@ class _CounterScreenState extends State<CounterScreen> {
     );
   }
 }
-
