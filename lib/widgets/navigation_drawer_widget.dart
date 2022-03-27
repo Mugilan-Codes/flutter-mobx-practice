@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobx_practice/screens/counter/counter_screen.dart';
+import 'package:mobx_practice/screens/dice_counter/dice_counter_screen.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   const NavigationDrawerWidget({Key? key}) : super(key: key);
@@ -23,7 +24,10 @@ class NavigationDrawerWidget extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            buildMenuItem(title: "Dice Counter", icon: Icons.medication)
+            buildMenuItem(
+                title: "Dice Counter",
+                icon: Icons.medication,
+                onTap: () => selectedItem(context, 1))
           ],
         ),
       ),
@@ -55,8 +59,13 @@ class NavigationDrawerWidget extends StatelessWidget {
 
     switch (i) {
       case 0:
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (context) => const CounterScreen()));
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const CounterScreen()));
+        break;
+      case 1:
+        Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => const DiceCounterScreen()));
+        break;
     }
   }
 }
