@@ -7,6 +7,7 @@ import 'package:mobx_practice/widgets/navigation_drawer_widget.dart';
 class CounterScreen extends StatefulWidget {
   const CounterScreen({Key? key}) : super(key: key);
 
+  final String routeName = '/counter';
   final String title = "MobX Counter";
 
   @override

@@ -9,6 +9,7 @@ final diceCounter = DiceCounter();
 class DiceCounterScreen extends StatelessWidget {
   const DiceCounterScreen({Key? key}) : super(key: key);
 
+  final String routeName = "/diceCounter";
   final String title = "Dice Counter";
 
   @override
