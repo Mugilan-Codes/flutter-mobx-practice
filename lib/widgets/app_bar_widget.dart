@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx_practice/theme_store.dart';
+import 'package:provider/provider.dart';
 
 class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
   AppBarWidget(
@@ -16,10 +17,10 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
   final Color? color;
   final Color? backgroundColor;
 
-  final ThemeStore themeStore = ThemeStore();
-
   @override
   Widget build(BuildContext context) {
+    final themeStore = Provider.of<ThemeStore>(context);
+
     return AppBar(
       iconTheme: IconThemeData(color: color),
       title: Text(title, style: TextStyle(color: color)),
