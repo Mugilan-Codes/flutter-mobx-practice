@@ -9,7 +9,7 @@ class AppBarWidget extends StatelessWidget with PreferredSizeWidget {
       required this.title,
       this.height = kToolbarHeight,
       this.color = Colors.white,
-      this.backgroundColor = Colors.blue})
+      this.backgroundColor})
       : super(key: key);
 
   final String title;
