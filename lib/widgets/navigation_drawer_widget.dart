@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobx_practice/screens/counter/counter_screen.dart';
 import 'package:mobx_practice/screens/dice_counter/dice_counter_screen.dart';
+import 'package:mobx_practice/screens/form/form_screen.dart';
 import 'package:mobx_practice/screens/todos/todos_screen.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -35,7 +36,14 @@ class NavigationDrawerWidget extends StatelessWidget {
             buildMenuItem(
                 title: "Todos",
                 icon: Icons.notes,
-                onTap: () => selectedItem(context, 2))
+                onTap: () => selectedItem(context, 2)),
+            const SizedBox(
+              height: 16,
+            ),
+            buildMenuItem(
+                title: "Form",
+                icon: Icons.pending_actions,
+                onTap: () => selectedItem(context, 3))
           ],
         ),
       ),
@@ -77,6 +85,10 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 2:
         Navigator.of(context)
             .push(MaterialPageRoute(builder: (context) => const TodosScreen()));
+        break;
+      case 3:
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => const FormScreen()));
         break;
     }
   }
