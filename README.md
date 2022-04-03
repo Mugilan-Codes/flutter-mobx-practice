@@ -1,6 +1,6 @@
 # mobx_practice
 
-A new Flutter project.
+A Flutter project with MobX State Management.
 
 ## Getting Started
 
